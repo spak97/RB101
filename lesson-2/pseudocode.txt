@@ -1,0 +1,86 @@
+1. a method that returns the sum of two integers
+
+declare fx with parameter n1 and n2
+  return n1 + n2
+
+2. a method that takes an array of strings, and returns a 
+   string that is all those strings concatenated together
+
+declare fx with param array
+  iterate through array
+  concatenate each element onto new string
+  return new string
+
+START
+
+# given array of strings
+
+SET empty string variable
+
+WHILE arr.length > 0
+  concatenate string to empty string
+
+RETURN new string
+
+3. a method that takes an array of integers, and returns 
+  a new array with every other element from 
+  the original array, starting with the first element. 
+
+SET empty array
+
+iterate through array
+  push even index element from input array into empty array
+
+RETURN array
+
+4. a method that determines the index of the 3rd occurrence of 
+  a given character in a string. For instance, if the given character 
+  is 'x' and the string is 'axbxcdxex' the method should
+  return 6 (the index of the 3rd 'x'). If the given character
+  does not occur at least 3 times, return nil.
+
+START
+
+input => str, char
+SET empty hash
+
+WHILE i < str.length
+  iterate through str and push char: index into hash
+  IF hash.count >= 3
+    RETURN last value of hash
+  ELSE
+    RETURN nil
+
+END
+
+5. a method that takes two arrays of numbers and returns the 
+  result of merging the arrays. The elements of the first array
+  should become the elements at the even indexes of the returned
+  array, while the elements of the second array should become the 
+  elements at the odd indexes.
+  # both arr args have the same number of elements
+
+START
+input => arr1, arr2
+
+SET e_arr
+
+WHILE i < arr1.length
+  e_arr.push(arr1[i])
+  e_arr.push(arr2[i])
+
+RETURN e_arr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
