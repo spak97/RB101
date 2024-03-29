@@ -1,9 +1,15 @@
-VALID_CHOICES = ['rock', 'paper', 'scissors']
+VALID_CHOICES = ['r', 'p', 's', 'l', 'S']
+
 
 def win?(first, second)
-  (first == 'rock' && second == 'scissors') ||
-  (first == 'paper' && second == 'rock') ||
-  (first == 'scissors' && second == 'paper')
+  keys = {
+        'r'=> ['l', 's'], 
+        'p'=> ['r', 'S'], 
+        's'=> ['p', 'l'], 
+        'S'=> ['s', 'r'], 
+        'l'=> ['S', 'p'] 
+        }
+  keys[first].include?(second)
 end
 
 def display_results(player, computer)
@@ -15,6 +21,7 @@ def display_results(player, computer)
     prompt("tie")
   end
 end
+
 
 def prompt(message)
   puts "=> #{message}"
