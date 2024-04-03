@@ -1,0 +1,1 @@
+# outputs elements in the array
